@@ -6,15 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
-let bluetoothScanner = BluetoothScanner()
 
-func appendAllFoundBluetoothDevices(){
-    
-    for values in bluetoothScanner.discoveredDevices{
-        print(values)
-    }
-    
-//    DiscoveredDevices.discoveredDevicesDictionary.append(<#T##newElement: NSDictionary##NSDictionary#>)
-    
+func alertActionBasic(viewController: UIViewController, title:String, message: String, completionHandler: @escaping(Bool?)->Void){
+    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+    alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: {action in
+        completionHandler(true)
+    }))
+    viewController.present(alertController, animated: true)
 }

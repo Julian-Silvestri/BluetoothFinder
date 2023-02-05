@@ -24,8 +24,14 @@
 		08DF9E67298ECE4B00901B65 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF9E66298ECE4B00901B65 /* Gif.swift */; };
 		08DF9E69298ECE9700901B65 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF9E68298ECE9700901B65 /* CustomLoader.swift */; };
 		08DF9E6B298F74CD00901B65 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DF9E6A298F74CD00901B65 /* ResultsVC.swift */; };
-		08E24FE6298F892500E2188C /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E24FE5298F892500E2188C /* Functions.swift */; };
 		08E24FE8298F8A6000E2188C /* CustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E24FE7298F8A6000E2188C /* CustomButtons.swift */; };
+		08E28C8B29901D7A003EC96D /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C8A29901D7A003EC96D /* Functions.swift */; };
+		08E28C8D29902555003EC96D /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C8C29902555003EC96D /* Globals.swift */; };
+		08E28C8F29902FDE003EC96D /* DeviceInformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C8E29902FDE003EC96D /* DeviceInformationVC.swift */; };
+		08E28C91299036E7003EC96D /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C90299036E7003EC96D /* StoreVC.swift */; };
+		08E28C9329904B77003EC96D /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C9229904B77003EC96D /* MapVC.swift */; };
+		08E28C9529904BE8003EC96D /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C9429904BE8003EC96D /* SettingsVC.swift */; };
+		08E28C9729904C0B003EC96D /* RideListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E28C9629904C0B003EC96D /* RideListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +73,14 @@
 		08DF9E66298ECE4B00901B65 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		08DF9E68298ECE9700901B65 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		08DF9E6A298F74CD00901B65 /* ResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsVC.swift; sourceTree = "<group>"; };
-		08E24FE5298F892500E2188C /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		08E24FE7298F8A6000E2188C /* CustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtons.swift; sourceTree = "<group>"; };
+		08E28C8A29901D7A003EC96D /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		08E28C8C29902555003EC96D /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		08E28C8E29902FDE003EC96D /* DeviceInformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInformationVC.swift; sourceTree = "<group>"; };
+		08E28C90299036E7003EC96D /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
+		08E28C9229904B77003EC96D /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		08E28C9429904BE8003EC96D /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		08E28C9629904C0B003EC96D /* RideListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +186,11 @@
 			children = (
 				08914112298D993E00C38B0F /* HomeVC.swift */,
 				08DF9E6A298F74CD00901B65 /* ResultsVC.swift */,
+				08E28C8E29902FDE003EC96D /* DeviceInformationVC.swift */,
+				08E28C90299036E7003EC96D /* StoreVC.swift */,
+				08E28C9229904B77003EC96D /* MapVC.swift */,
+				08E28C9429904BE8003EC96D /* SettingsVC.swift */,
+				08E28C9629904C0B003EC96D /* RideListVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,7 +209,8 @@
 			children = (
 				08DF9E66298ECE4B00901B65 /* Gif.swift */,
 				08DF9E68298ECE9700901B65 /* CustomLoader.swift */,
-				08E24FE5298F892500E2188C /* Functions.swift */,
+				08E28C8A29901D7A003EC96D /* Functions.swift */,
+				08E28C8C29902555003EC96D /* Globals.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -333,14 +351,20 @@
 				0891410F298D993E00C38B0F /* AppDelegate.swift in Sources */,
 				08914119298D993E00C38B0F /* BluetoothFinder.xcdatamodeld in Sources */,
 				08DF9E5F298DBAB000901B65 /* BluetoothScanner.swift in Sources */,
+				08E28C8F29902FDE003EC96D /* DeviceInformationVC.swift in Sources */,
+				08E28C8B29901D7A003EC96D /* Functions.swift in Sources */,
 				08DF9E5D298DB93900901B65 /* TitleLabel.swift in Sources */,
+				08E28C9729904C0B003EC96D /* RideListVC.swift in Sources */,
 				08DF9E64298EC77D00901B65 /* DiscoveredDevices.swift in Sources */,
 				08DF9E6B298F74CD00901B65 /* ResultsVC.swift in Sources */,
+				08E28C9329904B77003EC96D /* MapVC.swift in Sources */,
 				08DF9E61298DBC9800901B65 /* StartScanButton.swift in Sources */,
 				08914111298D993E00C38B0F /* SceneDelegate.swift in Sources */,
+				08E28C8D29902555003EC96D /* Globals.swift in Sources */,
 				08E24FE8298F8A6000E2188C /* CustomButtons.swift in Sources */,
+				08E28C91299036E7003EC96D /* StoreVC.swift in Sources */,
 				08DF9E67298ECE4B00901B65 /* Gif.swift in Sources */,
-				08E24FE6298F892500E2188C /* Functions.swift in Sources */,
+				08E28C9529904BE8003EC96D /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

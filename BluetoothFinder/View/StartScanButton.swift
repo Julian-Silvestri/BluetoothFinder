@@ -10,7 +10,7 @@ import UIKit
 class StartScanButton: UIButton {
 
     var cornerRadius = 10.0
-    var backgroundCustomColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    var backgroundCustomColor = #colorLiteral(red: 0.1803921569, green: 0.6078431373, blue: 0.8470588235, alpha: 1)
     var textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     var fontSize = 18
     var titleText = "Start Scan"
