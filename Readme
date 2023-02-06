@@ -1,1 +1,19 @@
 
+My submission for Appolo Scooters take home assessment. 
+
+Part 1: Scan for bluetooth devices, 
+  -I took this step a bit farther than requested. Instead of making one screen I made multiple screens and a details screen where you can tap a device and see details. 
+  -This part is located on the HOME tab. 
+  -Press start scan to scan for nearby bluetooth devices. 
+  -There are checks in place for necessary alert messages regarding any errors/expecations. Such as bluetooth is turend off, bluetooth has been disabled from app launch , there are no devices found and more. 
+  -I can improve this by saving ID and NAME of previously discovered devices. Saving these items in CORE DATA to be retrieved at a later date. A user could try to reconnect directly without having to search again. 
+  -The UI can be improved upon as well along with many other features such as searching the discovered devices list. 
+  
+ Part 2: Pixel Perfect design
+  -This part is located on the STORE tab. 
+  -I was unable to grab the exact photos as seen in the Figma. 
+  -The font used was also something I had to eyeball. I used Helvetica 
+  -This UI can be improved upon by adding in stack views to help reduce the amount of constraints needed. 
+  -The UI is optimized for all iPhone models.
+  -Improvements that can be added are, improved constraints for localization, Landscape orientation , Ipad ui. Using size classes can achieve this. 
+  
