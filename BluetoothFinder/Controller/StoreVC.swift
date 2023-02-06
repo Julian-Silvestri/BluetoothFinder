@@ -17,6 +17,20 @@ class careAndProtectCollectionViewCell: UICollectionViewCell{
 
 class accessoriesCollectioViewCell: UICollectionViewCell{
     
+    @IBOutlet weak var backgroundImf: UIImageView!
+    @IBOutlet weak var buyBtn: UIButton!
+    @IBOutlet weak var bottomViewTitle: UILabel!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var descriptionHere: UILabel!
+}
+
+class upgradesCollectionViewCell: UICollectionViewCell{
+    
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var buyBtn: UIButton!
+    @IBOutlet weak var bottomViewDescription: UILabel!
+    @IBOutlet weak var bottomViewTitle: UILabel!
+    @IBOutlet weak var backgroundImg: UIImageView!
 }
 
 class StoreVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource{
@@ -26,11 +40,16 @@ class StoreVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollection
     @IBOutlet weak var careAndProtectSeeAllBtn: UIButton!
     @IBOutlet weak var careAndProtectCollectionView: UICollectionView!
     @IBOutlet weak var accessoriesCollectionView: UICollectionView!
+    @IBOutlet weak var upgradesCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.careAndProtectCollectionView.dataSource = self
         self.careAndProtectCollectionView.delegate = self
+        self.accessoriesCollectionView.delegate = self
+        self.accessoriesCollectionView.dataSource = self
+        self.upgradesCollectionView.delegate = self
+        self.upgradesCollectionView.dataSource = self
         self.profileBtn.layer.borderWidth = 1
         self.profileBtn.layer.borderColor = UIColor.white.cgColor
         self.profileBtn.layer.cornerRadius = 20
@@ -40,32 +59,70 @@ class StoreVC: UIViewController,UICollectionViewDelegateFlowLayout, UICollection
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        
+        if collectionView == self.upgradesCollectionView {
+            return 1
+        } else {
+            return 3
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = careAndProtectCollectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? careAndProtectCollectionViewCell
         
-        
-        if indexPath.row == 1{
-            cell?.topLabel.isHidden = true
-            cell?.middleLabel.text = "APOLLO"
-            cell?.bottomLabel.text = "CARE"
+        if collectionView == self.careAndProtectCollectionView {
+            let cell = careAndProtectCollectionView.dequeueReusableCell(withReuseIdentifier: "cellOne", for: indexPath) as? careAndProtectCollectionViewCell
+            
+            
+            if indexPath.row == 1{
+                cell?.topLabel.isHidden = true
+                cell?.middleLabel.text = "APOLLO"
+                cell?.bottomLabel.text = "CARE"
+            }
+    //        cell?.bottomView.layer.cornerRadius = 10
+            cell?.bottomView.layer.borderWidth = 1
+            cell?.bottomView.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.layer.cornerRadius = 10
+            cell?.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.layer.borderWidth = 1
+            
+            return cell ?? UICollectionViewCell()
+        } else if collectionView == self.accessoriesCollectionView {
+            let cell = accessoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "cellTwo", for: indexPath) as? accessoriesCollectioViewCell
+
+    //        cell?.bottomView.layer.cornerRadius = 10
+            cell?.buyBtn.layer.cornerRadius = 16
+            
+            cell?.bottomView.layer.borderWidth = 1
+            cell?.bottomView.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.layer.cornerRadius = 10
+            cell?.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.layer.borderWidth = 1
+            
+            return cell ?? UICollectionViewCell()
+        } else {
+            let cell = upgradesCollectionView.dequeueReusableCell(withReuseIdentifier: "cellThree", for: indexPath) as? upgradesCollectionViewCell
+
+            cell?.buyBtn.layer.cornerRadius = 16
+            cell?.layer.cornerRadius = 10
+            cell?.layer.borderColor = UIColor.lightGray.cgColor
+            cell?.layer.borderWidth = 1
+//
+            return cell ?? UICollectionViewCell()
         }
-//        cell?.bottomView.layer.cornerRadius = 10
-        cell?.bottomView.layer.borderWidth = 1
-        cell?.bottomView.layer.borderColor = UIColor.lightGray.cgColor
-        cell?.layer.cornerRadius = 10
-        cell?.layer.borderColor = UIColor.lightGray.cgColor
-        cell?.layer.borderWidth = 1
-        
-        return cell ?? UICollectionViewCell()
+
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,sizeForItemAt indexPath: IndexPath) -> CGSize {
- 
-        return CGSize(width: 255, height: 328)
+        
+        if collectionView == upgradesCollectionView {
+            return CGSize(width: 354, height: 371)
+        } else {
+            return CGSize(width: 255, height: 328)
+            
+        }
+        
     }
 
 }
