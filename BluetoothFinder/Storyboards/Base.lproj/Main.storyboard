@@ -352,24 +352,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jc5-RY-neS">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
-                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5P-Wx-tFF">
+                                <rect key="frame" x="76" y="20" width="168" height="39.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r6r-OO-7gO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jc5-RY-neS" firstAttribute="leading" secondItem="r6r-OO-7gO" secondAttribute="leading" id="NXG-hD-42C"/>
-                            <constraint firstItem="r6r-OO-7gO" firstAttribute="bottom" secondItem="jc5-RY-neS" secondAttribute="bottom" id="Z9k-HN-Vy4"/>
-                            <constraint firstItem="r6r-OO-7gO" firstAttribute="trailing" secondItem="jc5-RY-neS" secondAttribute="trailing" id="dK2-nj-ir5"/>
-                            <constraint firstItem="jc5-RY-neS" firstAttribute="top" secondItem="r6r-OO-7gO" secondAttribute="top" id="re3-wM-WKr"/>
+                            <constraint firstItem="r6r-OO-7gO" firstAttribute="trailing" secondItem="J5P-Wx-tFF" secondAttribute="trailing" constant="76" id="Nzb-QW-Ioy"/>
+                            <constraint firstItem="J5P-Wx-tFF" firstAttribute="top" secondItem="r6r-OO-7gO" secondAttribute="top" constant="20" id="SMq-7e-Jyc"/>
+                            <constraint firstItem="J5P-Wx-tFF" firstAttribute="leading" secondItem="r6r-OO-7gO" secondAttribute="leading" constant="76" id="z4h-Kl-CN5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="oEa-94-3Xv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCC-fk-xvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2588" y="-2310"/>
+            <point key="canvasLocation" x="-2589.375" y="-2310"/>
         </scene>
         <!--Store-->
         <scene sceneID="J2u-Vb-iCw">
